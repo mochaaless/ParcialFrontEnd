@@ -31,6 +31,18 @@ const WordInfo: FunctionalComponent<Props> = (props) => {
                                     {def?.example ? def.example : "No example found"}
                                 </div>
                             </div>
+                            <div className="synonyms">
+                                <div className="definition-header">
+                                    Synonyms
+                                </div>
+                                <div className="definition-info">
+                                    {meaning.synonyms.map((syn, index) => (
+                                        <a className="synonym" key={index} href={`/buscar/${syn}`}>
+                                            {syn}
+                                        </a>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>

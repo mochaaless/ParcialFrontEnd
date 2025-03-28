@@ -7,6 +7,7 @@ export type Definition = {
 
 export type Meaning = {
     definitions: Definition[]
+    synonyms: string[]
 }
 
 export type Word = {
